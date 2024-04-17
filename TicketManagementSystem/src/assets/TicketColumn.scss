@@ -1,13 +1,15 @@
 #column-container{
   display:flex;
   min-height:75vh;
+  justify-content: space-evenly;
 
   .column{
     border:solid;
     border-radius: 15px;
     border-width: 0.5px;
     height:75vh;
-    min-width:200px;
+    width: 30vw;
+    min-width: 100px;
     box-sizing: border-box;
 
     .column-title{

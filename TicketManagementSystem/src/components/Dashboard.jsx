@@ -5,6 +5,7 @@ import TicketColumn from "./TicketColumn";
 
 function Dashboard() {
   const [tickets, setTickets] = useState([]);
+  const [updates, setUpdates] = useState(false);
 
   useEffect(() => {
     fetchTickets()
@@ -12,11 +13,15 @@ function Dashboard() {
         setTickets(data)
       })
       .catch((error)=> console.log('error fetching tickets', error))
-  },[])
+  }, [updates])
+
+  const handleUpdate = () => {
+    setUpdates(!updates)
+  }
 
   return (
     <div id="dashboard-div">
-      <TicketColumn tickets={tickets} />
+      <TicketColumn tickets={tickets} updateDashboard={handleUpdate} />
     </div>
   )
 }

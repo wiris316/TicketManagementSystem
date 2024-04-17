@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import '../assets/TicketColumn.scss';
 import TicketCard from './TicketCard';
 
-function TicketColumn({tickets}) {
-  const [sortedTicket, setSortedTicket] = useState({new:[], ['inProgress']:[], resolved:[]})
+function TicketColumn({tickets, updateDashboard}) {
+  const [sortedTicket, setSortedTicket] = useState({ new: [], ['inProgress']: [], resolved: [] })
   
   useEffect(() => {
     if (tickets) {
@@ -25,7 +25,7 @@ function TicketColumn({tickets}) {
         <div className="column">
           <h3 className='column-title'>{key}</h3>
           {sortedTicket[key].map((ticket) => (
-            <TicketCard tickets={ticket} />
+            <TicketCard tickets={ticket} updateDashboard={updateDashboard} />
           ))}
         </div>
     ))}
