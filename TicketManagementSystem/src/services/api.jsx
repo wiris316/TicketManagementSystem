@@ -1,4 +1,4 @@
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { addDoc, collection, getDocs, getFirestore } from 'firebase/firestore';
 
 import { initializeApp } from 'firebase/app';
 
@@ -17,5 +17,22 @@ export async function fetchTickets() {
     return ticketData;
   } catch (error) {
     console.error('Error fetching ticket data:', error);
+  }
+}
+
+export async function submitTicket(description, email, name, subject) {
+  try {
+    const ticketCollection = collection(firestore, 'ticket');
+    await addDoc(ticketCollection, {
+      createdAt: new Date(),
+      description: description,
+      email: email,
+      name: name,
+      status: 'new',
+      subject: subject,
+    })
+    console.log('Successfully submitted ticket.')
+  } catch (error) {
+    console.error('Error in submitting ticket:', error)
   }
 }
