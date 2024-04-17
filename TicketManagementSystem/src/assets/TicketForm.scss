@@ -1,0 +1,32 @@
+#ticket-form {
+  display:flex;
+  background-color: rgb(245, 240, 241);
+  width:max-content;
+  margin:0;
+  padding: 20px;
+
+  #form-content{
+    display:grid;
+  }
+
+  label {
+    margin-top: 10px;
+
+  }
+  input{
+    width: max-content;
+  }
+
+  #description {
+    width: 60vw;
+    min-height: 30vh;
+    max-height: 40vh;
+  }
+
+  #submit-button{
+    display:flex;
+    justify-self: flex-end;
+    width:min-content;
+    margin-top: 10px;
+  }
+}
