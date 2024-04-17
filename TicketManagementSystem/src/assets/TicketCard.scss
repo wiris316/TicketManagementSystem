@@ -1,0 +1,22 @@
+#card-container{
+  height: max-content;
+  margin: 5px;
+
+  .card-content{
+    background-color: rgb(251, 251, 247);
+    padding: 5px;
+    height:min-content;
+
+    label{
+      margin-top:10px;
+      font-size:x-small;
+      font-weight: 600;
+    }
+  
+    p{
+      font-size:x-small;
+      margin: 0px;
+    }
+  }
+
+}
