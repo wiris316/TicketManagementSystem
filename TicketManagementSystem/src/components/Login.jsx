@@ -1,10 +1,13 @@
-function Login({setUser}) {
+import '../assets/Login.scss';
+import { Button } from '@mui/material';
+
+function Login({ user, setUser }) {
 
   return (
     <>
-      <div>
-        <button onClick={()=>setUser('admin')}>ADMIN</button>
-        <button onClick={()=>setUser('user')}>USER</button>
+      <div id="login-form">
+        <Button onClick={()=>setUser('admin')}>ADMIN</Button>
+        <Button onClick={()=>setUser('user')}>USER</Button>
       </div>
 
     </>

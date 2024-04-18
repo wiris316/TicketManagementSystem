@@ -2,4 +2,17 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  display:flex;
+  justify-content: center;
+
+}
+
+p {
+  font-size: small;
+  color:rgb(87, 88, 87);
+}
+
+label {
+  color:rgb(21, 21, 21);
+  font-weight: 650;
 }

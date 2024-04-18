@@ -1,20 +1,41 @@
 #column-container{
   display:flex;
-  min-height:75vh;
+  min-height:70vh;
+  height: 90vh;
+  position:relative;
   justify-content: space-evenly;
-
+  
   .column{
     border:solid;
-    border-radius: 15px;
+    border-radius: 8px;
     border-width: 0.5px;
-    height:75vh;
     width: 30vw;
     min-width: 100px;
     box-sizing: border-box;
-
+    overflow:hidden;
+    
     .column-title{
       text-align: center;
-      text-decoration:underline;
+      background-color: rgb(211, 216, 214);
+      margin:auto;
+    }
+    
+    .new{
+      color:rgb(184, 56, 17);
+    }
+
+    .inprogress{
+      color:blue;
+    }
+
+    .resolved{
+      color:green;
+    }
+
+    .column-content{
+      overflow-y: auto;
+      height:80vh;
+      border-width: 0.1px;
     }
   }
 }

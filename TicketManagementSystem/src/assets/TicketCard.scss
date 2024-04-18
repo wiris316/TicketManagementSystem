@@ -1,20 +1,22 @@
 #card-container{
   height: max-content;
   margin: 5px;
+  font-size: x-small;
   
-  :hover{
+  &:hover{
     cursor: pointer;
+    scale:1.05;
+    box-shadow: -1em 0 .4em rgba(10, 36, 15, 0.346), -1em 0 .4em rgba(10, 36, 15, 0.346);
+    
   }
 
   .card-content{
     background-color: rgb(251, 251, 247);
-    padding: 5px;
+    padding: 12px;
     height:min-content;
 
     label{
       margin-top:10px;
-      font-size:x-small;
-      font-weight: 600;
     }
   
     p{

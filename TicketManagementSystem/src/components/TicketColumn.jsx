@@ -21,12 +21,14 @@ function TicketColumn({tickets, updateDashboard}) {
 
   return (
     <div id="column-container">
-      {Object.keys(sortedTicket).map((key) => (
-        <div className="column">
-          <h3 className='column-title'>{key}</h3>
-          {sortedTicket[key].map((ticket) => (
-            <TicketCard tickets={ticket} updateDashboard={updateDashboard} />
-          ))}
+      {Object.keys(sortedTicket).map((key, i) => (
+        <div className="column" key={i}>
+          <h3 className={`column-title ${key.split(' ').join('')}`}>{key}</h3>
+          <div className="column-content">
+            {sortedTicket[key].map((ticket) => (
+              <TicketCard key={ticket.id} tickets={ticket} updateDashboard={updateDashboard} />
+            ))}
+          </div>
         </div>
     ))}
     </div>
