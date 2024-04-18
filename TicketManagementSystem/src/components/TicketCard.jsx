@@ -12,13 +12,13 @@ function TicketCard({ tickets, updateDashboard}) {
     <div id="card-container" onClick={openTicketDetails}>
       {open && <DetailsModal tickets={tickets} open={open} setOpen={setOpen} updateDashboard={updateDashboard} />}
       <div className="card-content">
-          <label>ticketid:</label>
-          <p>{tickets.id}</p>
-          <label>subject:</label>
-          <p>{tickets.subject}</p>
-          <label>description:</label>
-          <p>{tickets.description.substring(0,100) + '...'}</p>
-        </div>
+        
+        <p><label>ID: </label>{tickets.id}</p>
+        
+        <p><label>SUBJECT: </label>{tickets.subject}</p>
+        
+        <p><label>DESCRIPTION: </label>{tickets.description.substring(0,100) + '...'}</p>
+      </div>
     </div>
   )
 }

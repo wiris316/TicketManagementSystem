@@ -1,26 +1,59 @@
 #ticket-form {
   display:flex;
-  background-color: rgb(245, 240, 241);
-  width:max-content;
+  background-color:rgb(238, 243, 239);
+  width:min-content;
   margin:0;
   padding: 20px;
 
   #form-content{
     display:grid;
+
+    #user-info{
+      display:grid;
+      justify-content: center;
+      
+      #name-email{
+        display:flex;
+        // justify-content: space-around;
+        margin-top:20px;
+  
+        #name{
+          margin-right:1rem;
+        }
+      }
+    }
+    
+  }
+
+  #receipt-msg{
+    font-size:small;
+    width:50vw;
+  }
+
+  #note{
+    color:blue;
+    justify-self: end;
+    margin: 0px;
+    font-size: xx-small;
+  }
+
+  h4{
+    margin:0px;
+    text-align: center;
   }
 
   label {
     margin-top: 10px;
-
-  }
-  input{
-    width: max-content;
+    font-size: x-small;
+    font-weight: 600;
   }
 
   #description {
-    width: 60vw;
+    width: 80vw;
+    max-width: 900px;
     min-height: 30vh;
-    max-height: 40vh;
+    max-height: 60vh;
+    resize: vertical;
   }
 
   #submit-button{

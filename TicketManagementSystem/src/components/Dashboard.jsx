@@ -2,6 +2,7 @@ import { fetchTickets } from "../services/api";
 import { useEffect, useState } from "react";
 import '../assets/Dasboard.scss';
 import TicketColumn from "./TicketColumn";
+import { CircularProgress } from '@mui/material';
 
 function Dashboard() {
   const [tickets, setTickets] = useState([]);
@@ -20,9 +21,14 @@ function Dashboard() {
   }
 
   return (
-    <div id="dashboard-div">
-      <TicketColumn tickets={tickets} updateDashboard={handleUpdate} />
-    </div>
+    <>
+      {tickets.length ? 
+        <div id="dashboard-div">
+          <TicketColumn tickets={tickets} updateDashboard={handleUpdate} />
+        </div>
+      : <CircularProgress/>
+      }
+    </>
   )
 }
 

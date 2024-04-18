@@ -26,28 +26,34 @@ function DetailsModal({ open, setOpen, tickets, updateDashboard}) {
       <Modal
         open={open}
         onClose={handleClose}
+        id="details-modal"
       >
-        <Box id="Box" sx={{ width: 200 }}>
+        <Box id="Box">
           <h4 id="modal-title">TICKET DETAILS</h4>
           <p id={`modal-${tickets.status.split(' ').join('')}`}>
             {tickets.status}
           </p>
-          <p id="modal-">
-            <label>id:</label> {tickets.id}
+          <p id="modal-ticketid">
+            <label>ID:</label> {tickets.id}
           </p>
-          <p id="modal-">
-            <label>name:</label> {tickets.name}
+          {tickets.createdAt && 
+            <p id="modal-date">
+              <label>DATE:</label> {tickets.createdAt.toDate().toLocaleString()}
+            </p>
+          }
+          <p id="modal-name">
+            <label>NAME:</label> {tickets.name}
           </p>
-          <p id="modal-">
-            <label>subject:</label> {tickets.subject || 'n/a'}
+          <p id="modal-subject">
+            <label>SUBJECT:</label> {tickets.subject || 'n/a'}
           </p>
-          <p id="modal-">
-            <label>description:</label> {tickets.description}
+          <p id="modal-description">
+            <label>DESCRIPTION:</label> {tickets.description}
           </p>
           <Button onClick={updateTicket}>Update Ticket</Button>
         </Box>
       </Modal>
-      {openUpdate && <UpdateModal id={tickets.id} updateDashboard={updateDashboard} setOpenUpdate={setOpenUpdate} />}
+      {openUpdate && <UpdateModal tickets={tickets} updateDashboard={updateDashboard} setOpenUpdate={setOpenUpdate} />}
     </>
   );
 }
