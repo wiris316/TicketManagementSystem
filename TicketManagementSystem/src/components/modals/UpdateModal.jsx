@@ -3,10 +3,11 @@ import '../../assets/UpdateModal.scss';
 import { useState } from 'react';
 import { updateTicket } from '../../services/api';
 
-function UpdateModal({tickets, updateDashboard, setOpenUpdate}) {
-  const [selectedVal, setSelectedVal] = useState('new');
+function UpdateModal({tickets, updateDashboard, closeModal}) {
+  const [selectedVal, setSelectedVal] = useState(tickets.status);
   const [open, setOpen] = useState(true);
-  const [response, setResponse] = useState('')
+  const [response, setResponse] = useState('');
+  const status = ['new', 'in progress', 'resolved'];
 
   const handleOpen = () => {
     setOpen(true);
@@ -14,7 +15,7 @@ function UpdateModal({tickets, updateDashboard, setOpenUpdate}) {
   
   const handleClose = (e) => {
     setOpen(false);
-    setOpenUpdate(false);
+    closeModal();
   };
 
   const handleSelection = (e) => {
@@ -24,13 +25,23 @@ function UpdateModal({tickets, updateDashboard, setOpenUpdate}) {
 
   const handleSubmit = () => {
     updateTicket(tickets.id, selectedVal);
-    handleClose();
     updateDashboard();
+    handleClose();
     console.log(`EMAIL SENT TO ${tickets.name}: ${response}`)
   }
 
   const updateResponse = (e) => {
     setResponse(e.target.value)
+  }
+
+  const filterOptions = () => {
+    const filtered = [];
+    status.forEach((ele) => {
+      if (ele !== tickets.status) {
+        filtered.push(<option value={ele}>{ele}</option>);
+      }
+    })
+    return filtered;
   }
 
   return (
@@ -43,9 +54,8 @@ function UpdateModal({tickets, updateDashboard, setOpenUpdate}) {
       <Box id="update-modal-box" sx={{ width: 200 }} onClick={(e)=>e.stopPropagation()}>
         <p id="modal-title">Set ticket status as:</p>
         <select className="selection" value={selectedVal} onChange={handleSelection} >
-          <option value="new">new</option>
-          <option value="in progress">in progress</option>
-          <option value="resolved">resolved</option>
+          <option value={tickets.status}>{tickets.status}</option>
+          {filterOptions()}
         </select>
         <p>Send a response: </p>
         <textarea maxLength="250" cols="50" id="response-input" type="text" name="response" onChange={updateResponse} placeholder={`Dear ${tickets.name},` }/>  

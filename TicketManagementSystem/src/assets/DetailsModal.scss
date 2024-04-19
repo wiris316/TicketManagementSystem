@@ -8,6 +8,10 @@
   border: 2px solid #000;
   box-shadow: 24;
   padding: 20px;
+
+  label{
+    font-size: x-small;
+  }
   
   h4{
     text-align: center;
@@ -20,6 +24,11 @@
 
   button {
     float:right;
+    color:#427aa1;
+
+    &:hover{
+      scale:1.1;
+    }
   }
 
   #modal-new {
@@ -38,6 +47,12 @@
     text-align: center;
     color:green;
     margin-top:0px;
+  }
+
+  #modal-description{
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: x-small;
   }
 
 }

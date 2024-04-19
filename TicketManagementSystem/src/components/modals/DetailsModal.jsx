@@ -33,14 +33,12 @@ function DetailsModal({ open, setOpen, tickets, updateDashboard}) {
           <p id={`modal-${tickets.status.split(' ').join('')}`}>
             {tickets.status}
           </p>
+          <p id="modal-date">
+            <label>DATE:</label> {tickets.createdAt.toDate().toLocaleString()}
+          </p>
           <p id="modal-ticketid">
             <label>ID:</label> {tickets.id}
           </p>
-          {tickets.createdAt && 
-            <p id="modal-date">
-              <label>DATE:</label> {tickets.createdAt.toDate().toLocaleString()}
-            </p>
-          }
           <p id="modal-name">
             <label>NAME:</label> {tickets.name}
           </p>

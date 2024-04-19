@@ -1,33 +1,36 @@
 #column-container{
   display:flex;
   min-height:70vh;
-  height: 90vh;
   position:relative;
   justify-content: space-evenly;
   
   .column{
     border:solid;
-    border-radius: 8px;
+    border-color:#427aa1;
     border-width: 0.5px;
     width: 30vw;
     min-width: 100px;
-    box-sizing: border-box;
-    overflow:hidden;
+    height:80vh;
     
     .column-title{
       text-align: center;
       background-color: rgb(211, 216, 214);
       margin:auto;
+      margin-top:-35px;
+      
+      .badge-counter{
+        left: 1rem;
+      }
     }
     
     .new{
       color:rgb(184, 56, 17);
     }
-
+    
     .inprogress{
       color:blue;
     }
-
+    
     .resolved{
       color:green;
     }
