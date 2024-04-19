@@ -21,12 +21,21 @@ function DetailsModal({ open, setOpen, tickets, updateDashboard}) {
     setOpenUpdate(true)
   }
 
+  const closeModal = () => {
+    handleClose();
+  }
+
+  const stopPropagation = (e) => {
+    e.stopPropagation()
+  }
+
   return (
     <>
       <Modal
         open={open}
         onClose={handleClose}
         id="details-modal"
+        onClick={stopPropagation} 
       >
         <Box id="Box">
           <h4 id="modal-title">TICKET DETAILS</h4>
@@ -45,13 +54,14 @@ function DetailsModal({ open, setOpen, tickets, updateDashboard}) {
           <p id="modal-subject">
             <label>SUBJECT:</label> {tickets.subject || 'n/a'}
           </p>
-          <p id="modal-description">
-            <label>DESCRIPTION:</label> {tickets.description}
-          </p>
+          <label>DESCRIPTION:</label>
+          <div id="modal-description">
+          {tickets.description}
+          </div>
           <Button onClick={updateTicket}>Update Ticket</Button>
         </Box>
       </Modal>
-      {openUpdate && <UpdateModal tickets={tickets} updateDashboard={updateDashboard} setOpenUpdate={setOpenUpdate} />}
+      {openUpdate && <UpdateModal tickets={tickets} updateDashboard={updateDashboard} closeModal={handleClose} />}
     </>
   );
 }
