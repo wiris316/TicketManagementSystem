@@ -1,28 +1,75 @@
 #dashboard-div{
-  width: fit-content;
   height: 80vh;
   background-color:#dcdcdd;
 }
 
+#right-content{
+  display:grid;
+  justify-items: right;
+  line-height: .8;
+
+  #welcome{
+    float:right;
+    color:#EBF2FA;
+    margin-bottom: 0;
+  }
+  
+  #logout-button{
+    color:yellow;
+    margin:0;
+    padding:0;
+    width:max-content;
+    align-self: right;
+    text-decoration: none;
+
+    &:hover{
+      scale:1.1;
+      color:#EBF2FA;
+    }
+  }
+}
+
 #refresh-button{
-  color:#EBF2FA;
+  color:yellow;
   float:left;
-  font-size: x-small;
-  top: 10px;
+  top: 10vh;
 
   &:hover{
     scale:1.1;
+    color:#EBF2FA;
   }
 }
 
 #refresh-circular-progress{
   float:left;
-  margin-left:50px;
+  margin: 100px -100px auto 50px; 
+  padding: 0;
 }
   
-h2{
-  display:flex;
+#dashboard-header{
   color:#EBF2FA;
-  margin: 1em 0 1.2em 4em;
+  text-align: right;
   justify-content: center;
+  line-height:.5;
+  padding-bottom:20px;
+}
+
+@media only screen and (max-width:800px) {
+  #dashboard-container{
+    height:100vh;
+
+    #refresh-button{
+      top: 1.5vh;
+    }
+    
+    #refresh-circular-progress{
+      float:left;
+      margin: 10px -100px auto 50px; 
+      padding: 0;
+    }
+
+    #dashboard-header{
+      text-align: center;
+    }
+  }
 }

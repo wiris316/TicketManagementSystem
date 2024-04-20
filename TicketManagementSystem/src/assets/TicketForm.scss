@@ -1,8 +1,8 @@
 #ticket-form {
   display:flex;
   background-color:#e5ecf4;
-  width:min-content;
-  margin-top:5vh;
+  justify-content: center;
+  margin-top:1vh;
   padding: 20px;
   color: #46494c;
   
@@ -14,18 +14,18 @@
       display:grid;
       justify-content: center;
       margin-bottom: 15px;
+      width:100%;
       
       #name-email{
         display:flex;
-        // justify-content: space-around;
         margin-top:20px;
+        width:min-content;
   
         #name{
           margin-right:1rem;
         }
       }
-    }
-    
+    }  
   }
 
   #receipt-msg{
@@ -60,13 +60,17 @@
     font-size: x-small;
     font-weight: 600;
   }
+  
+  #description-container{
+    display:grid;
 
-  #description {
-    width: 80vw;
-    max-width: 550px;
-    min-height: 30vh;
-    max-height: 60vh;
-    resize: vertical;
+    #description {
+      width: 80vw;
+      max-width: 550px;
+      min-height: 30vh;
+      max-height: 60vh;
+      resize: vertical;
+    }
   }
 
   #submit-button{
@@ -78,6 +82,45 @@
 
     &:hover{
       scale:1.1;
+    }
+  }
+}
+
+#welcome{
+  color:#e5ecf4;
+  margin:5vh 0 0 0;
+}
+
+#logout-button{
+  color:#e5ecf4;
+  padding:0;
+  text-decoration: underline;
+  
+  &:hover{
+    scale:1.1;
+    color:yellow;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  #welcome{
+    margin-top:0;
+  }
+  
+  #user-info{
+    justify-content: initial !important;
+    height:min-content;
+
+    #name-email{
+      min-width: 40vw;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    
+    .input-fields{
+      input{
+        min-width:100%;
+      }
     }
   }
 }

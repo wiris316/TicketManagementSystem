@@ -36,9 +36,9 @@ function UpdateModal({tickets, updateDashboard, closeModal}) {
 
   const filterOptions = () => {
     const filtered = [];
-    status.forEach((ele) => {
+    status.forEach((ele, index) => {
       if (ele !== tickets.status) {
-        filtered.push(<option value={ele}>{ele}</option>);
+        filtered.push(<option value={ele} key={index+=1}>{ele}</option>);
       }
     })
     return filtered;
@@ -53,12 +53,12 @@ function UpdateModal({tickets, updateDashboard, closeModal}) {
     >
       <Box id="update-modal-box" sx={{ width: 200 }} onClick={(e)=>e.stopPropagation()}>
         <p id="modal-title">Set ticket status as:</p>
-        <select className="selection" value={selectedVal} onChange={handleSelection} >
-          <option value={tickets.status}>{tickets.status}</option>
+        <select className="selection" value={selectedVal} onChange={handleSelection} key={'select'}>
+            <option value={tickets.status} key={0}>{tickets.status}</option>
           {filterOptions()}
         </select>
         <p>Send a response: </p>
-        <textarea maxLength="250" cols="50" id="response-input" type="text" name="response" onChange={updateResponse} placeholder={`Dear ${tickets.name},` }/>  
+        <textarea maxLength="1000" cols="50" id="response-input" type="text" name="response" onChange={updateResponse} placeholder={`Dear ${tickets.name},` }/>  
         <Button onClick={handleSubmit}>SUBMIT</Button>
       </Box>
     </Modal>

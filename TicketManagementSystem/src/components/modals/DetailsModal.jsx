@@ -40,7 +40,7 @@ function DetailsModal({ open, setOpen, tickets, updateDashboard}) {
         <Box id="Box">
           <h4 id="modal-title">TICKET DETAILS</h4>
           <p id={`modal-${tickets.status.split(' ').join('')}`}>
-            {tickets.status}
+            {tickets.status.toUpperCase()}
           </p>
           <p id="modal-date">
             <label>DATE:</label> {tickets.createdAt.toDate().toLocaleString()}

@@ -9,10 +9,10 @@ function App() {
 
   return (
     <>
-      {user == '' ? <Login setUser={setUser} />
-        : user === 'admin' ? 
-            <Dashboard />
-          : <TicketForm />
+      {!user.role ? <Login setUser={setUser} />
+        : user.role === 'admin' ? 
+          <Dashboard user={user} setUser={setUser} />
+          : <TicketForm user={user} setUser={setUser} />
       }
     </>
   )

@@ -2,7 +2,6 @@
   display:flex;
   min-height:70vh;
   position:relative;
-  justify-content: space-evenly;
   
   .column{
     border:solid;
@@ -20,25 +19,44 @@
       
       .badge-counter{
         left: 1rem;
+        bottom:.2rem;
       }
     }
     
     .new{
-      color:rgb(184, 56, 17);
+      color:#EBF2FA;
+      background-color: #165fb9;
     }
     
     .inprogress{
-      color:blue;
+      background-color: #bd7735;
+      color:#EBF2FA;
     }
     
     .resolved{
-      color:green;
+      color:#EBF2FA;
+      background-color: #679436;
     }
 
     .column-content{
       overflow-y: auto;
       height:80vh;
       border-width: 0.1px;
+    }
+  }
+}
+
+@media only screen and (max-width:800px) {
+  #column-container{
+    height:max-content;
+    font-size:smaller;
+    
+    .column{
+      height:100vh;
+
+      .badge-counter{
+        display:none;
+      }
     }
   }
 }

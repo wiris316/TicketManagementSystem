@@ -5,20 +5,20 @@
   border:solid;
   border-color:#e5ecf4;
   width:min-content;
-  padding:2em;
+  padding:1em;
   align-items: center;
 
   #login-title{
     color:#e5ecf4;
     width: min-content;
-    margin-right:1em;
+    margin-right:.5em;
   }
   
   #login-form{
     border:solid;
     border-width:1px;
     height:min-content;
-    width:300px;
+    width:250px;
     padding:10px;
     position:relative;
     background-color:#e5ecf4;
@@ -57,9 +57,37 @@
 
 @media only screen and (max-width:800px) {
   #login-container{
-    display:grid;
+    display:flex;
+    flex-direction: column;
     padding:5px 10px 30px 10px;
     border:none;
     margin-top:5vh;
+    align-items: center;
+
+    #login-title{
+      font-size:small;
+      align-self:flex-start;
+      z-index: 1;
+      margin-top:0px;
+      color:#427aa1;
+      position:fixed;
+      top:7.5vh;
+      line-height: 1;
+      margin-left: 5px;
+    }
+
+    #login-form{
+      padding-top:8vh;
+
+      #login-header{
+        margin-top:0;
+        margin-bottom:10px;
+      }
+    
+      #form-content{
+        display:grid;
+        align-items: center;
+      }
+    }
   }
 }
