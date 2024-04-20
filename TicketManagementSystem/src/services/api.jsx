@@ -1,5 +1,5 @@
-import { addDoc, collection, doc, getDoc, getDocs, getFirestore, limit, query, orderBy } from 'firebase/firestore';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { addDoc, collection, doc, getDoc, getDocs, getFirestore, limit, query, orderBy, updateDoc } from 'firebase/firestore';
+import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { initializeApp } from 'firebase/app';
 
 const firebaseConfig = {
@@ -38,13 +38,35 @@ export async function submitTicket(description, email, name, subject) {
   }
 }
 
-export async function signIn(email, password) {
+export async function updateTicket(ticketid, status) {
+  try {
+    const ticketRef = doc(firestore, 'ticket', ticketid);
+    updateDoc(ticketRef, {status: status}, { merge: true });
+    console.log('Document successfully updated!');
+  } catch (error) {
+    console.error('Error in updating ticket: ', error);
+  }
+}
+
+export async function signInAuth(email, password) {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     return userCredential.user;
   } catch (error) {
-    console.error('Error signing in', error);
+    console.error('Error signing in: ', error)
   }
+}
+
+export async function signOutAuth() {
+  if (auth.currentUser) {
+    signOut(auth)
+      .then(() => {
+        return;
+      }).catch((error) => {
+      console.error('Error logging out: ', error)
+    })
+  }
+  return;
 }
 
 export async function getUser(email) {
