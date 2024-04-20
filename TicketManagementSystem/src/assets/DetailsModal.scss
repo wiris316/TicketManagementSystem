@@ -53,8 +53,12 @@
     max-height: 300px;
     overflow-y: auto;
     font-size: x-small;
+    word-wrap: break-word;
   }
 
+  #modal-subject{
+    word-wrap: break-word;
+  }
 }
 
 @media only screen and (max-width: 1024px) {

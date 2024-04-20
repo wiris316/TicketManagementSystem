@@ -25,7 +25,7 @@ function TicketColumn({tickets, updateDashboard}) {
       {Object.keys(sortedTicket).map((key, i) => (
         <div className="column" key={i}>
           <h3 className={`column-title ${key.split(' ').join('')}`}>{key.toUpperCase()}
-            <Badge className="badge-counter" badgeContent={sortedTicket[[key]].length} color="secondary" />
+            <Badge className="badge-counter" badgeContent={sortedTicket[[key]].length} color="primary" />
           </h3>
 
           <div className="column-content">

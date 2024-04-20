@@ -55,22 +55,22 @@ function TicketForm({user, setUser}) {
                 <div id="name-email">
                   <span className='input-fields'>
                     <label htmlFor="name">*NAME: </label>
-                    <input type="text" id="name" name="name" value={user.name} onChange={updateForm} placeholder="Full Name"/>
+                    <input type="text" id="name" name="name" value={form.name} onChange={updateForm} placeholder="Full Name" required/>
                   </span>
                   <span className='input-fields'>
                     <label htmlFor="email">*EMAIL: </label>
-                    <input type="text" id="email" name="email" value={user.email} onChange={updateForm} placeholder="Email"/>
+                    <input type="email" id="email" name="email" value={form.email} onChange={updateForm} placeholder="Email" required/>
                   </span>
                 </div>
               
                 <label htmlFor="subject">SUBJECT:</label>
-                <input type="text" id="subject" name="subject" value={form.subject} onChange={updateForm} />
+                <input type="text" maxLength="50" id="subject" name="subject" value={form.subject} onChange={updateForm} />
 
               </div>
 
               <div id="description-container">
                 <label htmlFor="description">*DESCRIPTION OF THE PROBLEM:</label>
-                <textarea maxLength="1000" cols="50" type="text" id="description" name="description" value={form.description} onChange={updateForm} placeholder="Describe the issue in 1000 characters or less."/>
+                <textarea maxLength="1000" cols="50" type="text" id="description" name="description" value={form.description} onChange={updateForm} placeholder="Describe the issue in 1000 characters or less." required/>
               </div>
 
               <Button type="submit" id="submit-button">SUBMIT</Button>

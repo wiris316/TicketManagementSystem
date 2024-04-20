@@ -5,7 +5,7 @@
   
   .column{
     border:solid;
-    border-color:#427aa1;
+    border-color:#2B4570;
     border-width: 0.5px;
     width: 30vw;
     min-width: 100px;
@@ -24,18 +24,18 @@
     }
     
     .new{
-      color:#EBF2FA;
-      background-color: #165fb9;
+      color:whitesmoke;
+      background-color: #448de5;
     }
     
     .inprogress{
-      background-color: #bd7735;
-      color:#EBF2FA;
+      color:whitesmoke;
+      background-color: #e8ab71;
     }
     
     .resolved{
-      color:#EBF2FA;
-      background-color: #679436;
+      color:whitesmoke;
+      background-color: #96d156;
     }
 
     .column-content{

@@ -1,7 +1,7 @@
 #login-container{
   display:flex;
   justify-items: center;
-  margin-top: 30%;
+  margin-top: 35%;
   border:solid;
   border-color:#e5ecf4;
   width:min-content;
@@ -17,7 +17,7 @@
   #login-form{
     border:solid;
     border-width:1px;
-    height:min-content;
+    height:max-content;
     width:250px;
     padding:10px;
     position:relative;
@@ -59,29 +59,28 @@
   #login-container{
     display:flex;
     flex-direction: column;
-    padding:5px 10px 30px 10px;
+    padding:0px 10px 30px 10px;
     border:none;
-    margin-top:5vh;
+    margin-top:10vh;
     align-items: center;
 
     #login-title{
       font-size:small;
       align-self:flex-start;
       z-index: 1;
-      margin-top:0px;
+      margin-top:5px;
       color:#427aa1;
       position:fixed;
-      top:7.5vh;
+      top:12.5vh;
       line-height: 1;
-      margin-left: 5px;
+      margin-left: 10px;
     }
 
     #login-form{
-      padding-top:8vh;
+      padding-top:4rem;
 
       #login-header{
-        margin-top:0;
-        margin-bottom:10px;
+        margin: 10px auto 10px 0;
       }
     
       #form-content{

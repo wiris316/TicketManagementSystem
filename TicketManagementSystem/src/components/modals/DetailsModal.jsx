@@ -9,9 +9,6 @@ function DetailsModal({ open, setOpen, tickets, updateDashboard}) {
   useEffect(() => {
   },[openUpdate])
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
   const handleClose = () => {
     setOpen(false);
   };
@@ -19,10 +16,6 @@ function DetailsModal({ open, setOpen, tickets, updateDashboard}) {
   const updateTicket = (e) => {
     e.stopPropagation();
     setOpenUpdate(true)
-  }
-
-  const closeModal = () => {
-    handleClose();
   }
 
   const stopPropagation = (e) => {
@@ -50,6 +43,9 @@ function DetailsModal({ open, setOpen, tickets, updateDashboard}) {
           </p>
           <p id="modal-name">
             <label>NAME:</label> {tickets.name}
+          </p>
+          <p id="modal-email">
+            <label>EMAIL:</label> {tickets.email}
           </p>
           <p id="modal-subject">
             <label>SUBJECT:</label> {tickets.subject || 'n/a'}

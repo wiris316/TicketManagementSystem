@@ -11,7 +11,7 @@
   #welcome{
     float:right;
     color:#EBF2FA;
-    margin-bottom: 0;
+    margin: 10px auto 0px auto;
   }
   
   #logout-button{
@@ -32,7 +32,7 @@
 #refresh-button{
   color:yellow;
   float:left;
-  top: 10vh;
+  top: 8vh;
 
   &:hover{
     scale:1.1;
@@ -42,7 +42,7 @@
 
 #refresh-circular-progress{
   float:left;
-  margin: 100px -100px auto 50px; 
+  margin: 50px -100px auto 50px; 
   padding: 0;
 }
   
