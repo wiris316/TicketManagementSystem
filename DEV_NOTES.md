@@ -1,0 +1,25 @@
+##TECH STACK
+This application is built using React, Vite, SCSS, MaterialUI, and hosted on Firebase with Firestore database and Firebase Authentication. 
+
+**FRONTEND:**
+Frontend Framework / Lbrary: 
+  ● React: Leveraged React's component-based architecture to create reusable components. 
+
+UI Component Library
+  ● MaterialUI: Utilized its pre-designed components for a modern and clean interface.
+
+Styling Language:
+  ● SCSS: Utilized for its nesting feature to streamline CSS development and enhance code maintainability.
+
+Build Tool:
+  ● Vite: Chosen for its fast build time and out-of-the-box support for React. 
+
+**BACKEND:**
+Deployment:
+  ● Firebase Hosting: Deployed with Firebase Hosting for it's seamless integration with other Firebase services. 
+
+Database:
+  ● Firebase Firestore: Integrated for its flexible NoSQL database and real-time data synchronization.
+
+Authentication:
+  ● Firebase Authentication: Included as one of Firebase services, the email and password based authentication service offers a secure and convenient sign-in experience, while maintaining a simple development process. 
