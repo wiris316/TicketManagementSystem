@@ -9,9 +9,6 @@ function DetailsModal({ open, setOpen, tickets, updateDashboard}) {
   useEffect(() => {
   },[openUpdate])
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
   const handleClose = () => {
     setOpen(false);
   };
@@ -21,17 +18,22 @@ function DetailsModal({ open, setOpen, tickets, updateDashboard}) {
     setOpenUpdate(true)
   }
 
+  const stopPropagation = (e) => {
+    e.stopPropagation()
+  }
+
   return (
     <>
       <Modal
         open={open}
         onClose={handleClose}
         id="details-modal"
+        onClick={stopPropagation} 
       >
         <Box id="Box">
           <h4 id="modal-title">TICKET DETAILS</h4>
           <p id={`modal-${tickets.status.split(' ').join('')}`}>
-            {tickets.status}
+            {tickets.status.toUpperCase()}
           </p>
           <p id="modal-date">
             <label>DATE:</label> {tickets.createdAt.toDate().toLocaleString()}
@@ -42,16 +44,20 @@ function DetailsModal({ open, setOpen, tickets, updateDashboard}) {
           <p id="modal-name">
             <label>NAME:</label> {tickets.name}
           </p>
+          <p id="modal-email">
+            <label>EMAIL:</label> {tickets.email}
+          </p>
           <p id="modal-subject">
             <label>SUBJECT:</label> {tickets.subject || 'n/a'}
           </p>
-          <p id="modal-description">
-            <label>DESCRIPTION:</label> {tickets.description}
-          </p>
+          <label>DESCRIPTION:</label>
+          <div id="modal-description">
+          {tickets.description}
+          </div>
           <Button onClick={updateTicket}>Update Ticket</Button>
         </Box>
       </Modal>
-      {openUpdate && <UpdateModal tickets={tickets} updateDashboard={updateDashboard} setOpenUpdate={setOpenUpdate} />}
+      {openUpdate && <UpdateModal tickets={tickets} updateDashboard={updateDashboard} closeModal={handleClose} />}
     </>
   );
 }

@@ -1,28 +1,79 @@
-#dashboard-div{
-  width: fit-content;
-  height: 80vh;
-  background-color:#dcdcdd;
-}
-
-#refresh-button{
-  color:#EBF2FA;
-  float:left;
-  font-size: x-small;
-  top: 10px;
-
-  &:hover{
-    scale:1.1;
+#dashboard-container{
+  #right-content{
+    display:grid;
+    justify-items: right;
+    line-height: .8;
+  
+    #welcome{
+      text-align: right;
+      width:100%;
+      color:#EBF2FA;
+      margin: 10px auto 0px auto;
+    }
+    
+    #logout-button{
+      color:yellow;
+      margin:0;
+      padding:0;
+      width:max-content;
+      align-self: right;
+      text-decoration: none;
+  
+      &:hover{
+        scale:1.1;
+        color:#EBF2FA;
+      }
+    }
+  }
+  
+  #dashboard-div{
+    height: 80vh;
+    background-color:#dcdcdd;
+  }
+  
+  #refresh-button{
+    color:yellow;
+    float:left;
+    top: 8vh;
+  
+    &:hover{
+      scale:1.1;
+      color:#EBF2FA;
+    }
+  }
+  
+  #refresh-circular-progress{
+    float:left;
+    margin: 50px -100px auto 50px; 
+    padding: 0;
+  }
+    
+  #dashboard-header{
+    color:#EBF2FA;
+    text-align: right;
+    justify-content: center;
+    line-height:.5;
+    padding-bottom:20px;
   }
 }
 
-#refresh-circular-progress{
-  float:left;
-  margin-left:50px;
-}
-  
-h2{
-  display:flex;
-  color:#EBF2FA;
-  margin: 1em 0 1.2em 4em;
-  justify-content: center;
+
+@media only screen and (max-width:800px) {
+  #dashboard-container{
+    height:100vh;
+
+    #refresh-button{
+      top: 1.5vh;
+    }
+    
+    #refresh-circular-progress{
+      float:left;
+      margin: 10px -100px auto 50px; 
+      padding: 0;
+    }
+
+    #dashboard-header{
+      text-align: center;
+    }
+  }
 }

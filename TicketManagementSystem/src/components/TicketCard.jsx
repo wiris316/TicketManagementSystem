@@ -14,8 +14,8 @@ function TicketCard({ tickets, updateDashboard}) {
       <div className="card-content">
         <p><label>DATE: </label>{tickets.createdAt.toDate().toLocaleString()}</p>
         <p><label>ID: </label>{tickets.id}</p>
-        <p><label>SUBJECT: </label>{tickets.subject === '' ? 'n/a' : tickets.subject}</p>
-        <p><label>DESCRIPTION: </label>{tickets.description.substring(0,100) + '...'}</p>
+        <p><label>SUBJECT: </label>{tickets.subject || 'n/a'}</p>
+        <p><label>DESCRIPTION: </label>{tickets.description.substring(0, 200) + '...'}</p>
       </div>
     </div>
   )

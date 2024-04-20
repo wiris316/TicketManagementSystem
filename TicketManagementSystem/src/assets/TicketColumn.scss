@@ -2,11 +2,10 @@
   display:flex;
   min-height:70vh;
   position:relative;
-  justify-content: space-evenly;
   
   .column{
     border:solid;
-    border-color:#427aa1;
+    border-color:#2B4570;
     border-width: 0.5px;
     width: 30vw;
     min-width: 100px;
@@ -20,25 +19,59 @@
       
       .badge-counter{
         left: 1rem;
+        bottom:.2rem;
       }
     }
     
     .new{
-      color:rgb(184, 56, 17);
+      color:whitesmoke;
+      background-color: #448de5;
     }
     
     .inprogress{
-      color:blue;
+      color:whitesmoke;
+      background-color: #e8ab71;
     }
     
     .resolved{
-      color:green;
+      color:whitesmoke;
+      background-color: #96d156;
     }
 
     .column-content{
-      overflow-y: auto;
+      overflow-y: scroll;
+      scrollbar-width: thin;
       height:80vh;
       border-width: 0.1px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: rgb(231, 229, 226);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: rgb(166, 166, 171);
+      border-radius: 20px;
+      border:none;
+    }
+  }
+}
+
+@media only screen and (max-width:800px) {
+  #column-container{
+    height:max-content;
+    font-size:smaller;
+    
+    .column{
+      height:100vh;
+
+      .badge-counter{
+        display:none;
+      }
     }
   }
 }

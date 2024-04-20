@@ -1,6 +1,6 @@
 import '../assets/Login.scss';
 import { Button } from '@mui/material';
-import { signIn, getUser } from '../services/api';
+import { signInAuth, getUser } from '../services/api';
 import { useState } from 'react';
 import { Box, CircularProgress } from '@mui/material';
 
@@ -11,9 +11,9 @@ function Login({ setUser }) {
     password: '',
   })
   
-  const signin = async (e) => {
+  const login = async (e) => {
     e.preventDefault();
-    const user = await signIn(loginForm.email, loginForm.password)
+    const user = await signInAuth(loginForm.email, loginForm.password)
     if (user) {
       setLoading(true);
       getUser(loginForm.email)
@@ -36,8 +36,8 @@ function Login({ setUser }) {
           <CircularProgress style={{color:'#a5be00'}} />
         </Box>
       : <div id="login-container">
-        <h1 id="login-title">Ticket Management System</h1>
-        <form id="login-form" onSubmit={signin}>
+        <h1 id="login-title">TICKET MANAGEMENT SYSTEM</h1>
+        <form id="login-form" onSubmit={login}>
           <h4 id="login-header">LOGIN:</h4>
           <div id="user-info">
             <div id="form-content">
@@ -45,7 +45,7 @@ function Login({ setUser }) {
               <input type="password" id="password" name="password" value={loginForm.password} onChange={handleChange} placeholder="PASSWORD"/>
             </div>
           </div>
-          <Button id="login-button" type="submit" variant="contained" onSubmit={signin}>LOGIN</Button>
+          <Button id="login-button" type="submit" variant="contained" onSubmit={login}>LOGIN</Button>
         </form>
       </div>
       }
