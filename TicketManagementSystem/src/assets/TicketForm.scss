@@ -86,19 +86,30 @@
   }
 }
 
-#welcome{
-  color:#e5ecf4;
-  margin:5vh 0 0 0;
-}
+#right-content{
+  display:grid;
+  justify-items: right;
+  line-height: .8;
 
-#logout-button{
-  color:#e5ecf4;
-  padding:0;
-  text-decoration: underline;
+  #welcome{
+    text-align: right;
+    width:100%;
+    color:#EBF2FA;
+    margin: 10px auto 0px auto;
+  }
   
-  &:hover{
-    scale:1.1;
+  #logout-button{
     color:yellow;
+    margin:0;
+    padding:0;
+    width:max-content;
+    align-self: right;
+    text-decoration: none;
+
+    &:hover{
+      scale:1.1;
+      color:#EBF2FA;
+    }
   }
 }
 

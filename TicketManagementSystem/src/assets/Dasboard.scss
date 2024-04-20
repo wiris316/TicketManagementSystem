@@ -1,58 +1,62 @@
-#dashboard-div{
-  height: 80vh;
-  background-color:#dcdcdd;
-}
-
-#right-content{
-  display:grid;
-  justify-items: right;
-  line-height: .8;
-
-  #welcome{
-    float:right;
-    color:#EBF2FA;
-    margin: 10px auto 0px auto;
+#dashboard-container{
+  #right-content{
+    display:grid;
+    justify-items: right;
+    line-height: .8;
+  
+    #welcome{
+      text-align: right;
+      width:100%;
+      color:#EBF2FA;
+      margin: 10px auto 0px auto;
+    }
+    
+    #logout-button{
+      color:yellow;
+      margin:0;
+      padding:0;
+      width:max-content;
+      align-self: right;
+      text-decoration: none;
+  
+      &:hover{
+        scale:1.1;
+        color:#EBF2FA;
+      }
+    }
   }
   
-  #logout-button{
+  #dashboard-div{
+    height: 80vh;
+    background-color:#dcdcdd;
+  }
+  
+  #refresh-button{
     color:yellow;
-    margin:0;
-    padding:0;
-    width:max-content;
-    align-self: right;
-    text-decoration: none;
-
+    float:left;
+    top: 8vh;
+  
     &:hover{
       scale:1.1;
       color:#EBF2FA;
     }
   }
-}
-
-#refresh-button{
-  color:yellow;
-  float:left;
-  top: 8vh;
-
-  &:hover{
-    scale:1.1;
+  
+  #refresh-circular-progress{
+    float:left;
+    margin: 50px -100px auto 50px; 
+    padding: 0;
+  }
+    
+  #dashboard-header{
     color:#EBF2FA;
+    text-align: right;
+    justify-content: center;
+    line-height:.5;
+    padding-bottom:20px;
   }
 }
 
-#refresh-circular-progress{
-  float:left;
-  margin: 50px -100px auto 50px; 
-  padding: 0;
-}
-  
-#dashboard-header{
-  color:#EBF2FA;
-  text-align: right;
-  justify-content: center;
-  line-height:.5;
-  padding-bottom:20px;
-}
 
 @media only screen and (max-width:800px) {
   #dashboard-container{
