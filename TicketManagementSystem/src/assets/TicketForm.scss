@@ -1,16 +1,19 @@
 #ticket-form {
   display:flex;
-  background-color:rgb(238, 243, 239);
+  background-color:#e5ecf4;
   width:min-content;
-  margin:0;
+  margin-top:5vh;
   padding: 20px;
-
+  color: #46494c;
+  
   #form-content{
     display:grid;
+    color: #46494c;
 
     #user-info{
       display:grid;
       justify-content: center;
+      margin-bottom: 15px;
       
       #name-email{
         display:flex;
@@ -28,16 +31,26 @@
   #receipt-msg{
     font-size:small;
     width:50vw;
+
+    #back-button{
+      float:right;
+      left:10px;
+      top:20px;
+      
+      &:hover{
+        scale:1.1;
+      }
+    }
   }
 
   #note{
-    color:blue;
+    color:#427aa1;
     justify-self: end;
     margin: 0px;
     font-size: xx-small;
   }
 
-  h4{
+  h3{
     margin:0px;
     text-align: center;
   }
@@ -50,7 +63,7 @@
 
   #description {
     width: 80vw;
-    max-width: 900px;
+    max-width: 550px;
     min-height: 30vh;
     max-height: 60vh;
     resize: vertical;
@@ -61,5 +74,10 @@
     justify-self: flex-end;
     width:min-content;
     margin-top: 10px;
+    color:#427aa1;
+
+    &:hover{
+      scale:1.1;
+    }
   }
 }

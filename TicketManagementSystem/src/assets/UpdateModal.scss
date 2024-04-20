@@ -23,6 +23,11 @@
 
   button{
     float:right;
+    color:#427aa1;
+
+    &:hover{
+      scale:1.1;
+    }
   }
 
 }

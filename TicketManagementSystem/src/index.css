@@ -4,7 +4,8 @@
   font-weight: 400;
   display:flex;
   justify-content: center;
-
+  background-color: #427aa1;
+  color:rgb(87, 88, 87);
 }
 
 p {
@@ -13,6 +14,6 @@ p {
 }
 
 label {
-  color:rgb(21, 21, 21);
+  color:#666769;
   font-weight: 650;
 }

@@ -1,11 +1,28 @@
 #dashboard-div{
   width: fit-content;
-  height: max-content;
-  border: solid;
-  margin:10px;
-  border-radius:10px;
-  border-color:black;
-  background-color:rgb(238, 243, 239);
-  // background-color:rgb(236, 236, 222);
+  height: 80vh;
+  background-color:#dcdcdd;
+}
 
+#refresh-button{
+  color:#EBF2FA;
+  float:left;
+  font-size: x-small;
+  top: 10px;
+
+  &:hover{
+    scale:1.1;
+  }
+}
+
+#refresh-circular-progress{
+  float:left;
+  margin-left:50px;
+}
+  
+h2{
+  display:flex;
+  color:#EBF2FA;
+  margin: 1em 0 1.2em 4em;
+  justify-content: center;
 }
