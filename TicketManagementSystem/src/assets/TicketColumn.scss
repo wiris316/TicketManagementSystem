@@ -39,9 +39,24 @@
     }
 
     .column-content{
-      overflow-y: auto;
+      overflow-y: scroll;
+      scrollbar-width: thin;
       height:80vh;
       border-width: 0.1px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: rgb(231, 229, 226);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: rgb(166, 166, 171);
+      border-radius: 20px;
+      border:none;
     }
   }
 }

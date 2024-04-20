@@ -21,9 +21,9 @@
     width:250px;
     padding:10px;
     position:relative;
-    background-color:#e5ecf4;
-    color: #46494c;
-    border-color:#1985A1;
+    background-color:#e5ecf400;
+    color: #e5ecf4;
+    border-color:yellow;
   
     #login-header{
       text-align: center;
@@ -44,12 +44,13 @@
       right: 0;
       bottom: 0;
       float:right;
-      color:#427aa1;
+      color:yellow;
       background-color: transparent;
       box-shadow: none;
   
       &:hover{
         scale:1.2;
+        color:#e5ecf4;
       }
     }
   }
@@ -69,7 +70,7 @@
       align-self:flex-start;
       z-index: 1;
       margin-top:5px;
-      color:#427aa1;
+      // color:#427aa1;
       position:fixed;
       top:12.5vh;
       line-height: 1;
