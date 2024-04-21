@@ -38,7 +38,6 @@ React web based application for ticket management and ticket submission. Refer t
 ## File Structure
 ```bash
 TicketManagementSystem/TicketManagementSystem
-TicketManagementSystem/TicketManagementSystem
  ├── src
  |	├── assets
  |		├── Dashboard.scss
