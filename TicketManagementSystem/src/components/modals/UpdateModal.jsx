@@ -25,9 +25,13 @@ function UpdateModal({tickets, updateDashboard, closeModal}) {
 
   const handleSubmit = () => {
     updateTicket(tickets.id, selectedVal);
-    updateDashboard();
-    handleClose();
-    console.log(`EMAIL SENT TO ${tickets.name}: ${response}`)
+    const confirm = window.confirm('Update ticket status / send message?')
+    if (confirm) {
+      response === '' ? console.log('NO MESSAGE SENT') : console.log(`Email message sent to ${tickets.name}: ${response}`);
+      window.alert('TICKET UPDATED (Check the console to see the sent message)');
+      handleClose();
+      updateDashboard();
+    }
   }
 
   const updateResponse = (e) => {
