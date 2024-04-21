@@ -1,7 +1,7 @@
 # Ticket Management System / Help Desk
 
 ## Project Overview: 
-React web based application for ticket management and ticket submission. Refer to './DEV_NOTES.md' for more information. 
+React web based application for ticket management and ticket submission. Refer to './DEV_NOTES.txt' for more information. 
 
 > Try it out here: [TICKET-SYSTEM](https://ticketsystem-a4980.web.app)
 
