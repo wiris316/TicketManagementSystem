@@ -4,13 +4,22 @@
 React web based application for ticket management and ticket submission. Refer to './DEV_NOTES.md' for more information. 
 
 > Try it out here: [TICKET-SYSTEM](https://ticketsystem-a4980.web.app)
-**NOTE**: Please reach out to the developer for sample authentication to login and test the application. 
 
+**NOTE: Please reach out to the developer for sample authentication to login and test the application.**
+
+<p align="center">
+ <img src="https://github.com/wiris316/TicketManagementSystem/assets/124114572/1fcf0eb8-2d4c-430f-b0c1-3c8cba4c51e4" width="700"/>
+</p>
+
+<div align="center">
+ 
 ![React](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28.svg?style=for-the-badge&logo=Firebase&logoColor=black)
 ![MUI](https://img.shields.io/badge/MUI-007FFF.svg?style=for-the-badge&logo=MUI&logoColor=white)
 ![SCSS](https://img.shields.io/badge/_-SCSS-C6538C.svg?style=for-the-badge)
+
+</div>
 
 ## Features
 - **Help Desk / Ticket Management:** Keep track of your tickets in an organized dashboard; sorting ticket status by "new", "in progress", and "resolved".
@@ -19,7 +28,14 @@ React web based application for ticket management and ticket submission. Refer t
 - **Firebase Authentication:** Leveraging Firebase Authentication's built-in support for email and password-based authentication, allowing users convenient sign-in access without the need for third-party authentication providers (Dev note: Security rules can be applied to control access based on user authentication and roles).
 - **Intuitive Interface and Responsive Design:** Application is optimized for different screen sizes, providing users with a consistent and intuitive experience.
 
-### File Structure
+
+<p align="center">
+<img src="https://github.com/wiris316/TicketManagementSystem/assets/124114572/5f7aa8f7-b97a-4b23-9a2f-ee5a4c7ac382" width="350"/>
+<img src="https://github.com/wiris316/TicketManagementSystem/assets/124114572/040dadd4-0ce9-4c80-b03a-89e9ab6f3ca3" width="400"/>
+</p>
+
+
+## File Structure
 ```bash
 TicketManagementSystem/TicketManagementSystem
  ├── src
