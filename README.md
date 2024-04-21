@@ -38,15 +38,16 @@ React web based application for ticket management and ticket submission. Refer t
 ## File Structure
 ```bash
 TicketManagementSystem/TicketManagementSystem
+TicketManagementSystem/TicketManagementSystem
  ├── src
  |	├── assets
- |    ├── Dashboard.scss
- |    ├── DetailsModal.scss
- |    ├── Login.scss
- |    ├── TicketCard.scss
- |    ├── TicketColumn.scss
- |    ├── TicketForm.scss
- |    ├── UpdateModal.scss
+ |		├── Dashboard.scss
+ |		├── DetailsModal.scss
+ |		├── Login.scss
+ |		├── TicketCard.scss
+ |		├── TicketColumn.scss
+ |		├── TicketForm.scss
+ |		├── UpdateModal.scss
  |	├── components
  |		├── modals
  |			├── DetailsModal.jsx
@@ -56,7 +57,7 @@ TicketManagementSystem/TicketManagementSystem
  |		├── TicketCard.jsx
  |		├── TicketColumn.jsx
  |		├── TicketForm.jsx
- |	├── components
+ |	├── services
  |		├── api.jsx
  |	├── App.css
  |	├── App.jsx
